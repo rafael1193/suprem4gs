@@ -10,6 +10,7 @@ X11 support, on recent GNU/Linux operating systems.
 Actually it builds on:
 
 * Fedora 20 x86-64
+* Fedora 20 x86
 
 And it runs on:
 
@@ -18,6 +19,14 @@ And it runs on:
 
 If you find other supported operating systems, please, fill an issue with
 instructions.
+
+# Instructions
+
+## Fedora
+
+    sudo yum install gcc compat-gcc-34-g77
+    make depend install
+    ./suprem4gs
 
 # Original README
 
