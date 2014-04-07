@@ -1,3 +1,5 @@
+# README
+
 SUPREM is an advanced two dimensional process simulator for silicon and
 gallium arsenide, originally developed at Stanford University.
 
@@ -20,15 +22,15 @@ And it runs on:
 If you find other supported operating systems, please, fill an issue with
 instructions.
 
-# Instructions
+## Instructions
 
-## Fedora
+### Fedora
 
     sudo yum install gcc compat-gcc-34-g77
     make depend install
     ./suprem4gs
 
-# Original README
+## Original README
 
 (C) Copyright (1994) The Board of Trustees of the Leland Stanford Junior
 University. Except for commercial resale, lease, license or other commercial
