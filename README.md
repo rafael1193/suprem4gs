@@ -17,6 +17,7 @@ Actually it builds on:
 And it runs on:
 
 * Fedora 20 x86-64
+* Fedora 20 x86
 * Ubuntu 13.10 x86-64
 
 If you find other supported operating systems, please, fill an issue with
