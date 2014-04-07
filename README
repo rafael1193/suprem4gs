@@ -1,3 +1,26 @@
+SUPREM is an advanced two dimensional process simulator for silicon and
+gallium arsenide, originally developed at Stanford University.
+
+Original sources were designed to build on classic UNIX operating systems
+and cannot be built on GNU/Linux. 
+
+This repository contains patched source files to allow compilation, without
+X11 support, on recent GNU/Linux operating systems.
+
+Actually it builds on:
+
+* Fedora 20 x86-64
+
+And it runs on:
+
+* Fedora 20 x86-64
+* Ubuntu 13.10 x86-64
+
+If you find other supported operating systems, please, fill an issue with
+instructions.
+
+# Original README
+
 (C) Copyright (1994) The Board of Trustees of the Leland Stanford Junior
 University. Except for commercial resale, lease, license or other commercial
 transactions, permission is hereby given to use, copy, modify, and

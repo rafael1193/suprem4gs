@@ -320,31 +320,31 @@ $(SUPREM): $(MAINOBJS) $(SLIBS)
 	$(CC) $(LDFLAGS) $(MAINOBJS) $(SLIBS) $(LIBS) -o $@
 
 install: $(SUPREM) $(BINDIR) $(DATADIR) $(HELPDIR) suprem.uk
-	install -m 755 $(SUPREM) $(BINDIR)
-	install -m 644 data/modelrc data/sup4gs.imp $(DATADIR)
+	install -m 755 $(SUPREM) $(HERE)/../bin
+	install -m 644 data/modelrc data/sup4gs.imp $(HERE)/../data
 
 keyread: always
 	cd keyread; $(MAKE) SYS='$(SYS)' OPT='$(OPT)' CC='$(CC)'
 
 suprem.uk : data/suprem.key keyread
 	keyread/keyread data/suprem.uk < data/suprem.key
-	install -m 644 data/suprem.uk $(DATADIR)
+	install -m 644 data/suprem.uk $(HERE)/../data
 
 #.. If necessary, create the directory for the suprem executable file.
 $(BINDIR):
-	mkdir -p $(BINDIR)
-	chmod -f 755 $(BINDIR)
+	mkdir -p $(HERE)/../bin
+	chmod -f 755 $(HERE)/../bin
 
 #.. If necessary, create the directory for the suprem data files.
 $(DATADIR):
-	mkdir -p $(DATADIR)
-	chmod -f 755 $(DATADIR)
+	mkdir -p $(HERE)/../data
+	chmod -f 755 $(HERE)/../data
 
 #.. If necessary, create the directory for the suprem help files.
 #.. Don't get your hopes up though.  There aren't any yet.
 $(HELPDIR):
-	mkdir -p $(HELPDIR)
-	chmod -f 755 $(HELPDIR)
+	mkdir -p $(HERE)/../help
+	chmod -f 755 $(HERE)/../help
 
 main.o:
 	$(CC) $(CFLAGS) $(DATAFILES) main.c -o main.o
@@ -359,6 +359,7 @@ $(LIBDEST)/device.a:	$(DEVICEOBJS)
 	$(AR) $(ARFLAGS) $@ $(DEVICEOBJS)
 	cd device ; $(RANLIB) ../$@
 $(LIBDEST)/diffuse.a:	$(DIFFUSEOBJS)
+	mkdir $(LIBDEST)
 	$(AR) $(ARFLAGS) $@ $(DIFFUSEOBJS)
 	cd diffuse ; $(RANLIB) ../$@
 $(LIBDEST)/finel.a:	$(FINELOBJS)
