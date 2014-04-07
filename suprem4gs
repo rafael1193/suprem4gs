@@ -1,6 +1,6 @@
 #!/bin/sh
 # Where is it?
-# should set SUPREM4_HOME first!
+SUPREM4_HOME=$(pwd)
 SUP4KEYFILE=$SUPREM4_HOME/data/suprem.uk
 SUP4MODELRC=$SUPREM4_HOME/data/modelrc
 SUP4IMPDATA=$SUPREM4_HOME/data/sup4gs.imp
