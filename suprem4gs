@@ -1,14 +1,15 @@
 #!/bin/sh
 # Where is it?
-SUPREM4_HOME=$(pwd)
-SUP4KEYFILE=$SUPREM4_HOME/data/suprem.uk
-SUP4MODELRC=$SUPREM4_HOME/data/modelrc
-SUP4IMPDATA=$SUPREM4_HOME/data/sup4gs.imp
-SUP4MANDIR=$SUPREM4_HOME/help
+# should set SUPREM4_HOME first!
+SUPREM4_HOME="$(pwd)"
+SUP4KEYFILE="$SUPREM4_HOME/data/suprem.uk"
+SUP4MODELRC="$SUPREM4_HOME/data/modelrc"
+SUP4IMPDATA="$SUPREM4_HOME/data/sup4gs.imp"
+SUP4MANDIR="$SUPREM4_HOME/help"
 
 export SUP4MANDIR SUP4KEYFILE SUP4MODELRC SUP4IMPDATA SUP4MANDIR
 
-exec $SUPREM4_HOME/bin/suprem $*
+exec "$SUPREM4_HOME/suprem" $*
 
 #should never get here!
 exit 1
